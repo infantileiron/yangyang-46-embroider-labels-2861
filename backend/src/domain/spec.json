@@ -1,0 +1,50 @@
+{
+  "organization": "竹巷传统礼服绣样室（11 人）",
+  "tagline": "比较针法族与底布标签向两个方向的推断强度，用条件分布找需保留双标签的组合。",
+  "source": "《礼服绣样送审签_202611.csv》里的主针法与承绣底布",
+  "record_name": "绣样送审签",
+  "algorithm": "非对称 Theil U 与组内条件众数",
+  "formula": "U(Y|X)=1−H(Y|X)/H(Y)。由同一有效样本的信息熵反转两个方向，输出每组标签的条件众数和潜在误填数。熵为零的一侧显示无法估计。",
+  "decision_prompt": "录入员可从哪一侧标签补出另一侧，哪些组合须保留逐片检查？",
+  "fields": [
+    {
+      "key": "ticket",
+      "label": "绣样签号",
+      "type": "text",
+      "example": "ZX-X01"
+    },
+    {
+      "key": "stitch",
+      "label": "主针法",
+      "type": "choice",
+      "example": "套针",
+      "choices": [
+        "套针",
+        "盘金",
+        "锁绣",
+        "打籽"
+      ]
+    },
+    {
+      "key": "base",
+      "label": "承绣底布",
+      "type": "choice",
+      "example": "电力纺",
+      "choices": [
+        "电力纺",
+        "绸缎",
+        "棉绫"
+      ]
+    }
+  ],
+  "parameters": [
+    {
+      "key": "minimum",
+      "label": "最小条件组样本量",
+      "type": "integer",
+      "min": 1,
+      "max": 40,
+      "default": 3
+    }
+  ]
+}

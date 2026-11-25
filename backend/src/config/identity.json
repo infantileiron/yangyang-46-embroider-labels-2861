@@ -1,0 +1,14 @@
+{
+  "slug": "yangyang-46-embroider-labels",
+  "title": "竹巷喜服·绣样标签互推核查",
+  "direction": "方向性标签关联",
+  "layout": "ledger",
+  "theme": "绯朱色针脚目录",
+  "recipient": "绣片备料组",
+  "work_modules": [
+    "绣样双标签登记",
+    "两向条件熵比选",
+    "互推错误明细"
+  ],
+  "follow_latest": false
+}
